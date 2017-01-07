@@ -49,7 +49,6 @@ sub _req {
     $uri->path('/'.$path);
     my $req = Net::Azure::DocumentDB::Request->new($method, $uri->as_string, $headers);
     $req->agent($AGENT);
-    warn $req->as_string;
     $req;
 }
 
